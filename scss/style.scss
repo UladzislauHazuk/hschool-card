@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'Mulish';
+    src: url(../fonts/Mulish-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Mulish';
+    src: url(../fonts/Mulish-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+$color-body: #F5F5F5;
+
+$color-font: #001A49;
+
+$color-font-gray: #4F596A;
+
+$color-white: #FFFFFF;
+
+%flex-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish';
+    font-style: normal;
+}
+
+body {
+    background-color: $color-body;
+    margin: auto;
+    width: 1120px;
+}
+
+a {
+    text-decoration: none;
+    color: $color-font;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background-color: $color-body;
+
+    .header-wrapper {
+        @extend %flex-item;
+        align-items: center;
+        padding: 15px 0;
+        width: 1120px;
+        margin: auto;
+
+        .img-logo {
+            background-image: url(../img/Course\ topics.svg);
+            background-repeat: no-repeat;
+            width: 124px;
+            height: 25px;
+        }
+    
+        .logo-btn {
+            background: linear-gradient(44.11deg, #8FBBE5 15.75%, #3D75BF 84.63%);
+            border-radius: 33px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            padding: 15px 25px;
+            color: $color-white;
+    
+            &:hover {
+                background: linear-gradient(44.11deg, #5aa1e3 15.75%, #2768be 84.63%);
+            }
+        }
+    
+        nav {
+            ul {
+                @extend %flex-item;
+                
+                li {
+                    list-style-type: none;
+                    align-items: center;
+    
+                    a:hover {
+                        border-bottom: 2px solid #001A49;
+                    }
+                }
+    
+                li:not(:last-child) {
+                    margin-right: 37px;
+                }
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 250px;
+
+    .main-card {
+        @extend %flex-item;
+        position: relative;
+    
+        .main-left-side {
+            @extend %flex-item;
+            flex-direction: column;
+            width: 550px;
+            height: 400px;
+    
+            h1 {
+                font: 700 60px 'Montserrat';
+                color: $color-font;
+            }
+    
+            p {
+                font: 400 20px 'Mulish';
+                color: $color-font-gray;
+            }
+    
+            .carier-btn {
+                background: linear-gradient(44.11deg, #8FBBE6 15.75%, #3D75BF 84.63%);
+                border-radius: 33px;
+                font: 700 20px 'Mulish';
+                padding: 22px 42px;
+                width: max-content;
+                color: $color-white;
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient(44.11deg, #5aa1e3 15.75%, #2768be 84.63%);
+                }
+            }
+        }
+    
+        .video {
+            background-image: url(../img/Group\ 7.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 590px;
+            height: 360px;
+            position: absolute;
+            z-index: 1;
+            left: 60%;
+            top: 10%;
+        }
+    }
+
+    .main-statistic {
+        margin: 150px 0 150px 0;
+        position: relative;
+
+        .statistic-img {
+            background-image: url(../img/Side\ Shape.svg);
+            background-repeat: no-repeat;
+            width: 288px;
+            height: 288px;
+            position: absolute;
+            right: 93%;
+            top: 14%;
+        }
+
+        .statistic-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 172px;
+            border: 1px solid #E7EAEB;
+            border-radius: 21px;
+            position: relative;
+            z-index: 1;
+            background-color: $color-white;
+            margin: auto;
+
+            .hr {
+                background-color: #E7EAEB;
+                width: 1px;
+                height: 112px;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            div:first-child {
+                margin-left: 120px;
+            }
+
+            div:last-child {
+                margin-right: 170px;
+            }
+
+            div p:first-child {
+                font: 700 40px 'Montserrat';
+                color: $color-font;
+            }
+
+            div p:last-child {
+                font: 400 16px 'Mulish';
+                color: $color-font-gray;
+                line-height: 20.08px;
+            }
+        }
+    }
+
+    .main-benefits {
+        div {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font: 700 46px 'Montserrat';
+            color: $color-font;
+            text-align: center;
+        }
+
+        .title-benefits {
+            font: 400 20px 'Mulish';
+            line-height: 30px;
+            text-align: center;
+            color: $color-font-gray;
+            width: 590px;
+            margin: 20px auto 60px auto;
+        }
+
+        .benefits-wrapper {
+            display: flex;
+            justify-content: space-between;
+            background-image: url(../img/Rectangle.svg);
+            background-repeat: no-repeat;
+            height: 172px;
+
+            .benefits-img {
+                background-image: url(../img/Vector.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 64px;
+                height: 64px;
+                margin: 50px 0 0 45px;
+            }
+
+            .benefits-content {
+                width: 940px;
+                margin: 50px 50px 0 0;
+
+                h3 {
+                    font: 700 24px 'Montserrat';
+                    color: $color-font;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font: 400 16px 'Mulish';
+                    color: $color-font-gray;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-wrapper {
+        flex-direction: column;
+
+        .img-logo {
+            background-size: cover;
+            margin: 20px 0 20px 0;
+        }
+
+        nav {
+            margin-bottom: 40px;
+
+            a {
+                font-size: 30px;
+            }
+        }
+    }
+
+    main {
+        .main-card {
+
+            .main-left-side {
+                align-items: center;
+                margin: 120px auto 0 auto;
+    
+                p {
+                    text-align: center;
+                }
+            }
+    
+            .video {
+                display: none;
+            }
+        }
+    
+        .main-statistic {
+            margin-top: 200px;
+    
+            .statistic-img {
+                display: none;
+            }
+    
+            .statistic-info {
+                max-width: 80%;
+
+                div:first-child {
+                    margin-left: 60px;
+                }
+    
+                div:last-child {
+                    margin-right: 85px;
+                }
+            }
+        }
+
+        .main-benefits {
+            .benefits-wrapper {
+                max-width: 80%;
+                margin: 20px auto 60px auto; 
+                height: max-content;
+                background-size: cover; 
+
+                .benefits-img {
+                    display: none;
+                }
+
+                .benefits-content {
+                    margin-left: 30px;
+                    text-align: center;
+
+                    h3 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        padding-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
